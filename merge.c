@@ -3,7 +3,7 @@
 #include <time.h>
 
 #define SIZE 2000000
-#define REP 500
+#define REP 20
 
 // Óo o CLOCKS_PER_SEC é constante pra obter o tempo em segundos, medir el clocks é melhor
 
@@ -54,7 +54,6 @@ int main () {
     int *ordenado = malloc(SIZE * sizeof(int));
     int *inverso = malloc(SIZE * sizeof(int));
     clock_t comeco, fim;
-
     
     fputs("MergeSort - Aleatorio: \n", fp);
     for(int i = 0; i < REP; i++) {
@@ -63,8 +62,8 @@ int main () {
         MergeSort(aleat, SIZE);
         fim = clock();
 
-        printf("%.0f s\n", ((double)(fim - comeco)) );
-        fprintf(fp, "%.0f\n", ((double)(fim - comeco)) / CLOCKS_PER_SEC);
+        printf("%d \n", fim - comeco);
+        fprintf(fp, "%d\n", fim - comeco);
     }
     
     fputs("MergeSort - Ordenado: \n", fp);
@@ -73,7 +72,7 @@ int main () {
         comeco = clock();
         MergeSort(ordenado, SIZE);
         fim = clock();
-        fprintf(fp, "%.0f\n", ((double)(fim - comeco)) / CLOCKS_PER_SEC);
+        fprintf(fp, "%d\n", fim - comeco);
     }
 
     fputs("MergeSort - Inverso: \n", fp);
@@ -82,8 +81,11 @@ int main () {
         comeco = clock();
         MergeSort(inverso, SIZE);
         fim = clock();
-        fprintf(fp, "%.0f\n", ((double)(fim - comeco)) / CLOCKS_PER_SEC);
+        fprintf(fp, "%d\n", fim - comeco);
     }
 
     fclose(fp);
+    free(aleat);
+    free(ordenado);
+    free(inverso);
 }
