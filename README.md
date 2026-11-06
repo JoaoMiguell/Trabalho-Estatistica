@@ -28,7 +28,7 @@ Cada tamanho é testado em três condições:
 
 ### Repetições
 
-Cada combinação de tamanho e tipo de vetor é executada **30 vezes para cada algoritmo**.
+Cada combinação de tamanho e tipo de vetor é executada originalmente **30 vezes para cada algoritmo** Esse número pode ser ajustado por meio da constante REPETICOES, definida no início de main.c. O aumento do número de repetições tende a reduzir a amplitude do intervalo de confiança dos resultados, proporcionando estimativas mais precisas.
 
 Isso significa que os algoritmos são comparados nas mesmas condições, permitindo observar não apenas um resultado isolado, mas também as variações de desempenho entre as execuções.
 
@@ -79,9 +79,6 @@ Para evitar esses problemas:
 2. Crie uma nova coluna chamada Tempo (s) -PT-BR, mantendo a coluna original.
 3. Na primeira linha de dados da nova coluna, insira a fórmula `=E2/10^12`, considerando que os tempos originais estão na coluna E.
 4. Arraste a fórmula até a última linha preenchida.
-5. Selecione toda a nova coluna `Tempo (s) -PT-BR`.
-6. Acesse **Formatar → Números → Formato de número personalizado**.
-7. Insira: `0,000000000000` e clique em aplicar.
 
 Dessa forma, os valores serão convertidos para a notação decimal brasileira, com vírgula e 12 casas decimais, sem alterar os dados originais.
 
