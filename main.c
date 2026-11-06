@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "tempo.h"
 #include "merge.h"
 #include "quick_sort.h"
