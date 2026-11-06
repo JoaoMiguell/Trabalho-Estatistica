@@ -76,11 +76,13 @@ Ao importar os dados, o Google Planilhas pode interpretar incorretamente o ponto
 Para evitar esses problemas:
 
 1. Importe o arquivo `.tsv`, selecionando a tabulação como separador de colunas, se necessário.
-2. Acesse **Formatar → Números → Formato de número personalizado**.
-3. Insira: `0,000000000000` e aplique.
-5. Selecione a coluna `Tempo (s)` e aplique um formato numérico personalizado com 12 casas decimais: `0.000000000000`
+2. Crie uma nova coluna chamada Tempo (s) -PT-BR, mantendo a coluna original.
+3. Na primeira linha de dados da nova coluna, insira a fórmula `E2=10^12`, considerando que os tempos originais estão na coluna E.
+4. Arraste a fórmula até a última linha preenchida.
+5. Acesse **Formatar → Números → Formato de número personalizado**.
+6. Insira: `0,000000000000` e aplique.
 
-Essa configuração é importante porque preserva a visualização da precisão dos tempos medidos. Sem ela, valores muito pequenos podem aparecer como zero ou ser interpretados incorretamente, prejudicando a análise dos resultados.
+Dessa forma, os valores serão convertidos para a notação decimal brasileira, com vírgula e 12 casas decimais, sem alterar os dados originais.
 
 ## Como compilar e executar
 
