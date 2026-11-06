@@ -76,7 +76,7 @@ Ao importar os dados, o Google Planilhas pode interpretar incorretamente o ponto
 Para evitar esses problemas:
 
 1. Importe o arquivo `.tsv`, selecionando a tabulação como separador de colunas, se necessário.
-2. Acesse **Formatar → Números → Formato de nuúmero personalizado**.
+2. Acesse **Formatar → Números → Formato de número personalizado**.
 3. Insira: `0,000000000000` e aplique.
 5. Selecione a coluna `Tempo (s)` e aplique um formato numérico personalizado com 12 casas decimais: `0.000000000000`
 
